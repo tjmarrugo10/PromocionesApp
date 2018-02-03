@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import datetime
 from django.db import models
+import time
 
 # Create your models here.
 class Categoria(models.Model):
@@ -21,13 +23,14 @@ class Promocion(models.Model):
     imagen=models.CharField(max_length=1000)
     descripcion = models.CharField(max_length=1000)
     valor = models.IntegerField(default=0)
-    fecha = models.DateField
+    fecha = models.DateTimeField()
     categoria=models.OneToOneField(Categoria,on_delete=models.CASCADE)
 
 class Comentario(models.Model):
     comentario=models.CharField(max_length=1000)
     promocion=models.ForeignKey(Promocion, on_delete=models.CASCADE)
     usuario=models.ForeignKey(Usuario, on_delete=models.CASCADE)
+
 
 
 
