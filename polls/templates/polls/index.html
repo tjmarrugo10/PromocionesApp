@@ -1,13 +1,36 @@
 <!DOCTYPE html>
+
+{% load staticfiles %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Promociones</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/promociones.css' %}">
 </head>
 <body>
-<h1 align="center">Promociones</h1>
-    {% for promocion in lista_promociones %}
-        <p>{{promocion.nombre}}</p>
-    {% endfor %}}
+    <div>
+        <h1><a href="/">Promociones</a></h1>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for promocion in lista_promociones %}
+                <tr>
+                    <td>{{promocion.nombre}}</td>
+                </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
