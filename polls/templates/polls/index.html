@@ -32,7 +32,7 @@
                 {% for promocion in lista_promociones %}
                     <tr>
                         <td>{{promocion.nombre}}</td>
-                        <td>{{promocion.imagen}}</td>
+                        <td><img src="{{promocion.imagen}}" width="400" height="300"></td>
                         <td>{{promocion.descripcion}}</td>
                         <td>{{promocion.valor}}</td>
                         <td>{{promocion.fecha}}</td>
