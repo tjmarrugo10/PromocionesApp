@@ -16,29 +16,31 @@
         <h1><a href="/">Promociones</a></h1>
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Imagen</th>
-                <th>Descripcion</th>
-                <th>Valor</th>
-                <th>Fecha</th>
-                <th>Categoria</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for promocion in lista_promociones %}
+    <div class="container">
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>{{promocion.nombre}}</td>
-                    <td>{{promocion.imagen}}</td>
-                    <td>{{promocion.descripcion}}</td>
-                    <td>{{promocion.valor}}</td>
-                    <td>{{promocion.fecha}}</td>
-                    <td>{{promocion.categoria}}</td>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Descripcion</th>
+                    <th>Valor</th>
+                    <th>Fecha</th>
+                    <th>Categoria</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {% for promocion in lista_promociones %}
+                    <tr>
+                        <td>{{promocion.nombre}}</td>
+                        <td>{{promocion.imagen}}</td>
+                        <td>{{promocion.descripcion}}</td>
+                        <td>{{promocion.valor}}</td>
+                        <td>{{promocion.fecha}}</td>
+                        <td>{{promocion.categoria}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    <div>
 </body>
 </html>
