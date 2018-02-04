@@ -18,17 +18,24 @@
     <table>
         <thead>
             <tr>
-                <th>
-                    Nombre
-                </th>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Descripcion</th>
+                <th>Valor</th>
+                <th>Fecha</th>
+                <th>Categoria</th>
             </tr>
         </thead>
         <tbody>
             {% for promocion in lista_promociones %}
                 <tr>
                     <td>{{promocion.nombre}}</td>
+                    <td>{{promocion.imagen}}</td>
+                    <td>{{promocion.descripcion}}</td>
+                    <td>{{promocion.valor}}</td>
+                    <td>{{promocion.fecha}}</td>
+                    <td>{{promocion.categoria}}</td>
                 </tr>
-
             {% endfor %}
         </tbody>
     </table>
